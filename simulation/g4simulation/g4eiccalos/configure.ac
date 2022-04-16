@@ -11,7 +11,7 @@ case $CXX in
   CXXFLAGS="$CXXFLAGS -Wall  -Werror -Wno-undefined-var-template"
  ;;
  *g++)
-  CXXFLAGS="$CXXFLAGS -Wall -Werror"
+  CXXFLAGS="$CXXFLAGS -Wall"
  ;;
 esac
 

@@ -1,13 +1,14 @@
 AUTOMAKE_OPTIONS = foreign
 
+AM_CXXFLAGS = `geant4-config --cflags`
+
 lib_LTLIBRARIES = \
   libg4eiccalos.la 
 
 AM_CPPFLAGS = \
   -I$(includedir) \
   -I$(OFFLINE_MAIN)/include  \
-  -I$(ROOTSYS)/include \
-  -I$(G4_MAIN)/include
+  -isystem$(ROOTSYS)/include
 
 
 AM_LDFLAGS = \
@@ -28,7 +29,7 @@ libg4eiccalos_la_LIBADD = \
   -lgsl \
   -lgslcblas \
   -lcalo_io
-  
+
 pkginclude_HEADERS = \
   PHG4BackwardHcalSubsystem.h \
   PHG4CrystalCalorimeterSubsystem.h \

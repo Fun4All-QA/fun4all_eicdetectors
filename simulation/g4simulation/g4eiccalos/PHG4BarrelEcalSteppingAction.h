@@ -26,7 +26,7 @@ class PHG4BarrelEcalSteppingAction : public PHG4SteppingAction
 
   //! stepping action
   bool UserSteppingAction(const G4Step*, bool) override;
-  ;
+
 
   //! reimplemented from base class
   void SetInterfacePointers(PHCompositeNode*) override;
