@@ -1,5 +1,7 @@
 AUTOMAKE_OPTIONS = foreign
 
+AM_CXXFLAGS = `geant4-config --cflags`
+
 # List of shared libraries to produce
 lib_LTLIBRARIES = \
     libg4eicdirc.la
@@ -7,8 +9,7 @@ lib_LTLIBRARIES = \
 AM_CPPFLAGS = \
     -I$(includedir) \
     -I$(OFFLINE_MAIN)/include \
-    -I$(ROOTSYS)/include \
-    -I$(G4_MAIN)/include \
+    -isystem$(ROOTSYS)/include \
     -I$(OPT_SPHENIX)/include
 
 AM_LDFLAGS = \
